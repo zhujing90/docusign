@@ -1,0 +1,36 @@
+.sig-container {
+    width: 50%;
+    border-style: dashed;
+    border-width: 1px;
+}
+
+.sig-container canvas {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.sig-container canvas {
+    background-image: url('../../assets/img/sign-here.png');
+    background-repeat: no-repeat;
+    background-position-y: 95%;
+}
+.row {
+    background-color: #F8F8F8;
+}
+.sig-panel {
+    border: 1px dashed #ccc;
+    cursor: default;
+    height: 234px;
+    position: relative;
+}
+.sig-panel-label {
+    border-top: 1px solid #ccc;
+    color: #999;
+    margin: 0px 24px 0;
+    padding-top: 7px;
+    position: relative;
+    text-align: center;
+}
+.button-area {
+    padding-top: 36px;
+}

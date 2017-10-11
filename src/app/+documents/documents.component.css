@@ -1,0 +1,14 @@
+.content_left {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    max-width: 375px;
+    min-width: 220px;
+    width: 220px;
+    background: #f4f4f4;
+    padding: 20px 0;
+}
+.btn-group {
+    margin-bottom: 22px;
+    padding: 0 24px;
+}

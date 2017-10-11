@@ -1,0 +1,55 @@
+<div class="logon_wrapper center">
+    <div class="logon_title">
+        Please Logon
+    </div>
+    <div class="logon_content">
+        <div class="row">
+            <div class="logo_wrapper col-md-5 ">
+                <img src="../../../assets/img/ist_logo_record.png" class="ico_dsr" />
+            </div>
+            <form #loginForm="ngForm" novalidate class="login-form" (ngSubmit)="doLogin(loginForm)">
+                <div class="logon_input_wrapper col-md-7">
+                    <div class="row offset_btm">
+                        <div class="col-md-4">
+                            <label class="control-label" for="userName">User Name</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text" id="username" name="username" required placeholder="UserName" [(ngModel)]="usermodel.username" #username="ngModel" [autofocus]="true" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row offset_btm">
+                        <div class="col-md-4">
+                            <label class="control-label" for="password">Password</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="password" name="password" required id="password" placeholder="Password" #password="ngModel" [(ngModel)]="usermodel.password" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row message_row">
+                        <div class="col-md-7">
+                            <div><span class="text-danger">{{ErrorMessage}}</span></div>
+                            <div *ngIf="username.touched && !username.valid" class="help-block ">
+                                <span class="text-danger">The username is required.</span>
+                            </div>
+                            <div *ngIf="password.touched && !password.valid" class="help-block text-danger">
+                                <span class="text-danger"> The password is required.</span>
+                            </div>
+                            <img *ngIf="!Islogin" style="width:30;height:30px;" src="../../../assets/img/loading.gif" />
+                        </div>
+                    </div>
+                    <div class="row offset_btm">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <button class="btn btn-default btn_custom" type="button" (click)="cancel()">Cancel</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-default btn_custom" type="submit" [disabled]="!loginForm.form.valid">{{LoginText}}</button>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

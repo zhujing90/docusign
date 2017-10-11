@@ -1,0 +1,25 @@
+.input-file {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.upload-item {
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    margin: 0 24px 24px 0;
+    padding: 20px;
+    width: 202px;
+    min-height: 225px;
+}
+
+.upload-item img {
+    width: 190px;
+    margin-left: -17px;
+    margin-bottom: -60px;
+}

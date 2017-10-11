@@ -1,0 +1,10 @@
+<div class="upload-item" id="upload-area" *ngIf="showUpload">
+  <div class="text-center badge-icon badge-document-add"></div>
+  <input id="upload-document" class="input-file" type="file" ng2FileSelect [uploader]="uploader" (change)="uploadFile()">
+  <label class="btn btn-block btn-primary ng-binding" data-walkme-id="upload_file_button" for="upload-document"><span class="glyphicon glyphicon-upload"></span> Upload</label>
+</div>
+<div class="upload-item" id="view-area" *ngIf="showViewed">
+  <div class="text-center badge-icon badge-document-add"></div>
+  <label class="btn btn-block btn-primary ng-binding"><span class="glyphicon"></span> Sign Document</label>
+  <img src="{{coverUrl}}" />
+</div>

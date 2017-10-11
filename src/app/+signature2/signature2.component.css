@@ -1,0 +1,24 @@
+
+.row {
+    background-color: #F8F8F8;
+}
+.sig-panel {
+    border: 1px dashed #ccc;
+    cursor: default;
+    height: 50px;
+    position: relative;
+    padding: 10px;
+}
+.font {
+    height: 150px;
+    text-align: center;
+}
+.button-area {
+    padding-top: 16px;
+}
+
+.font span {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 64px;
+    line-height: 132px;
+}

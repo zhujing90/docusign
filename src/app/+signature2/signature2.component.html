@@ -1,0 +1,34 @@
+<link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
+<div class="container">
+  <h2>Signature Form!</h2>
+  <form [formGroup]="sigForm" (ngSubmit)="submitForm(sigForm)">
+    <div class="row">
+      <div class="col-lg-6 col-md-4 col-sm-12">
+        <div class="sig-panel">
+          <label for="fullname" class="card-subtitle">Full Name</label>
+          <input id="fullname" placeholder="Full Name" type="text" formControlName="fullname">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="sig-panel">
+          <label for="initial" class="card-subtitle">Initial</label>
+          <input id="initial" placeholder="Initial" type="text" formControlName="initial">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-4 col-sm-12">
+        <div class="sig-panel font">
+          <span id="fullname-span">{{ formValues.fullname }}</span>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="sig-panel font">
+          <span id="initial-span">{{ formValues.initial }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="button-area"><input class="btn btn-default" type="submit" value="Submit" [disabled]="!sigForm.valid"></div>
+  </form>
+</div>
+

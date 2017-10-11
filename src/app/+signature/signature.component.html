@@ -1,0 +1,60 @@
+
+<div class="container">
+    <h3>{{title}}</h3>
+    <form [formGroup]="form" (submit)="submit()" (window:resize)="beResponsive()">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <div class="sig-panel sig-panel-signature"  #sigContainer1>
+                    <a class="sig-clear-button" (click)="sigs.first.clear()" *ngIf="form.controls.signatureField1.valid">Clear</a>
+                    <!--<button type="button" (click)="sigs.first.clear()" [disabled]="!form.controls.signatureField1.valid">Clear Sig 1</button>-->
+                    <signature-field formControlName="signatureField1"></signature-field>
+
+                    <div class="sig-panel-label ng-binding">
+                        <span class="icon icon-close sig-panel-sign-here"></span>
+                        Draw Signature
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="sig-panel sig-panel-initials" #sigContainer2>
+                    <a class="sig-clear-button" (click)="sigs.last.clear()" *ngIf="form.controls.signatureField2.valid">Clear</a>
+                    <signature-field formControlName="signatureField2"></signature-field>
+
+                    <div class="sig-panel-label ng-binding">
+                        <span class="icon icon-close sig-panel-sign-here"></span>
+                        Draw Initials
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<button type="button" (click)="clear()" [disabled]="!form.controls.signatureField1.valid && !form.controls.signatureField2.valid">Clear</button>-->
+
+        <div class="button-area"><input class="btn btn-default" type="submit" value="Submit" [disabled]="!form.valid"></div>
+    </form>
+</div>
+
+
+<!--<div class="container">
+    <form [formGroup]="form" (submit)="submit()" (window:resize)="beResponsive()">
+        <div class="sig-container" style="float: left;" #sigContainer1>
+            <div fxLayout="row">
+                <button type="button" (click)="sigs.first.clear()" [disabled]="!form.controls.signatureField1.valid">Clear Sig 1</button>
+            </div>
+            <div fxLayout="row">
+                <signature-field formControlName="signatureField1"></signature-field>
+            </div>
+        </div>
+        <div class="sig-container" style="float: right;" #sigContainer2>
+            <div fxLayout="row">
+                <button type="button" (click)="sigs.last.clear()" [disabled]="!form.controls.signatureField2.valid">Clear Sig 2</button>
+            </div>
+            <div fxLayout="row">
+                <signature-field formControlName="signatureField2"></signature-field>
+            </div>
+        </div>
+        <div>
+            <button type="button" (click)="clear()" [disabled]="!form.controls.signatureField1.valid && !form.controls.signatureField2.valid">Clear</button>
+            <button type="submit" [disabled]="!form.valid">Submit</button>
+        </div>
+    </form>
+</div>-->
